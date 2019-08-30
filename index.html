@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The Wise One! Try out your knowledge and see what you know and what to know">
+<meta name="keywords" content="Probabilities, Variables, Riddles, World problems, fun,">
+<meta name="Brainwork" content="Question and Answer">
+<meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:title" content="Agar.io " />
+<meta property="og:description" content="Prove you're the most wise! Answer some intelligent questions! Try and answer all quizes and be the most wise one!" />
+<meta property="og:url" content="http://agar.io/" />
+<meta property="og:image" content="http://agar.io/img/1.png" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="620" />
+<meta property="og:type" content="website" />
+<meta property="al:ios:url" content="com.miniclip.agar.io://">
+<meta property="al:ios:app_store_id" content="995999703">
+<meta property="al:ios:app_name" content="Agar.io">
+<meta property="al:android:url" content="com.miniclip.agar.io://">
+<meta property="al:android:app_name" content="Agar.io">
+<meta property="al:android:package" content="com.miniclip.agar.io">
+<title>The Wise</title>
+<link rel="Q&S" href="http://agar.io/" />
+    <style>
+    	canvas { background: #eee; display: block; margin: 0 auto; float: left;}
+    	div.game {  display: block; margin: 10px 20px; background: rgb(175, 171, 171);}
+        section.game-1 { float: left; width: 40%; position: relative;}
+        section.game-2 { float: left; width: 60%; position: relative;}
+        section.sound {background: rgb(175, 171, 171);text-align: center; width: 480px; height: 150px; clear: both; display: block;}
+        .hide{ display: none; }
+        .show{ display: inline; }
+       
+        /* Game 2 */
+               
+        #game21{
+            width: 40%;
+            height: 420px;
+            border: 1px solid #ffffff;
+            margin-top: 0.5em;
+            margin-right: 0.5em;
+            float: left;
+            position: relative;
+            background-color: rgb(34, 1, 14);
+            animation-name: example1;
+            animation-duration: 2s;
+        }
+        @keyframes example1 {
+        0%   {background-color: grey; right:0px; top:0px;}
+        25%  {background-color: brown; right:0px; top:200px;}
+        50%  {background-color: burlywood; right:200px; top:200px;}
+        75%  {background-color: rgb(48, 22, 39); right:200px; top:0px;}
+        100% {background-color: grey; right:0px; top:0px;}
+        }
+        #game22{
+            width: 40%;
+            height: 450px;
+            border: 1px solid #ffffff;
+            margin-top: 0.5em;
+            margin-left: 1em;
+            float: left;
+            position: relative;
+            background-color: rgb(51, 54, 45);
+            animation-name: example;
+            animation-duration: 2s;
+        }
+
+        @keyframes example {
+        0%   {background-color: darkolivegreen; left:0px; top:0px;}
+        25%  {background-color: darkkhaki; left:0px; top:200px;}
+        50%  {background-color: lightgreen; left:200px; top:200px;}
+        75%  {background-color: yellow; left:200px; top:0px;}
+        100% {background-color: darkolivegreen; left:0px; top:0px;}
+        }
+       
+        /* label color */
+        .input-field label {
+            color: #ffffff;
+        }
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #ffffff;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* valid color */
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* invalid color */
+        .input-field input[type=text].invalid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* icon prefix focus color */
+        .input-field .prefix.active {
+            color: #000;
+        }
+        #inputValidationEx, #inputValidationEx2, label{
+            padding: 3px;
+            margin: 4px;
+        }
+        button{
+            margin: 5px;
+            padding: 5px;
+        }
+        [ans]{
+            background-color: rgb(102, 3, 51);
+            color: white;
+
+        }
+        [res]{
+            background-color: rgb(78, 36, 56);
+            color: white;
+            
+        }
+        ol{
+            color: white;
+        }
+
+        /* For mobile phones: */
+[class*="col"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .colm1 {width: 8.33%;}
+    .colm2 {width: 16.66%;}
+    .colm3 {width: 25%;}
+    .colm4 {width: 33.33%;}
+    .colm5 {width: 41.66%;}
+    .colm6 {width: 50%;}
+    .colm7 {width: 58.33%;}
+    .colm8 {width: 66.66%;}
+    .colm9 {width: 75%;}
+    .colm10 {width: 83.33%;}
+    .colm11 {width: 91.66%;}
+    .colm12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col1 {width: 8.33%;}
+    .col2 {width: 16.66%;}
+    .col3 {width: 25%;}
+    .col4 {width: 33.33%;}
+    .col5 {width: 41.66%;}
+    .col6 {width: 50%;}
+    .col7 {width: 58.33%;}
+    .col8 {width: 66.66%;}
+    .col9 {width: 75%;}
+    .col10 {width: 83.33%;}
+    .col11 {width: 91.66%;}
+    .col12 {width: 100%;}
+}
+    </style>
+</head>
+<body>
+<main>
+<section class="game-1 col5 colm11">
+<canvas id="breakout" width="480" height="320" class="hide"></canvas>
+<img src="game1.png" alt="" id="breakoutimg" style="float: left" width="480" height="320">
+ <!--Play Sound-->
+ <section class="sound">
+    
+        <button style="font-size: 1.5rem; color: purple; vertical-align: top;" onclick="playBreakout()">Start Breakout Game</button> &nbsp;
+            <div>
+            <span style="font-size: 1.5rem; color: purple; vertical-align: top;">Play Sound</span>
+                <audio controls loop="loop">
+                        <source src="sweet.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                </audio></div>
+        
+        </section>
+</section>
+
+<section class="game-2 col7 colm11"> <!--Game 2-->
+    <form class="colm6" id="game21">
+            <div class="input-field col s12">
+                <i class="fas fa-envelope prefix"></i>
+                    <ol>
+                        <li>Who is the founder of Facebook? <br><input type="text" id="inputValidationEx3" size="10px">
+                            <span ans class="hide">Ans: 'Mark Zurkerberg'</span></li>
+                        <li>Who is the richest man in the world? <br><input type="text" id="inputValidationEx4" size="10px">
+                            <span ans class="hide">Ans: 'Jeff bezos'</span></li>
+                        <li>Who has the most followers on twitter? <br><input type="text" id="inputValidationEx5" size="10px">
+                            <span ans class="hide">Ans: 'Barack Obama'</span></li>
+                        <li>Who has the most followers on facebook? <br><input type="text" id="inputValidationEx6" size="10px">
+                            <span ans class="hide">Ans: 'Cristiano Ronaldo'</span></li>
+                        <li>Who holds the record for most grand slams won in women's tennis?<input type="text" id="inputValidationEx7" size="10px">
+                            <span ans class="hide">Ans: 'Serena Williams (23 Grand Slams Titles)'</span></li>
+                        <li>Who won the most UEFA best player award? <br><input type="text" id="inputValidationEx8" size="10px">
+                            <span ans class="hide">Ans: 'Cristiano Ronaldo (3 awards)'</span></li>
+                        <li>Who is the best player in the world in the year 2002? <input type="text" id="inputValidationEx9" size="10px">
+                            <span ans class="hide">Ans: 'Ronaldo (Brazil)'</span></li>
+                    </ol>
+                    <span class="helper-text" data-error="wrong" data-success="right"><input style="margin-left: 20em;" class="btn btn-primary btn-md" type="submit" id="s1btn"></span>
+                </div>
+            </form>
+
+        <form id="game22" class="colm6">
+                <ol>
+                    <li>Jimmy’s mother had three children. The first was called April, the second was called May. <br>What was the name of the third?<br><input type="text" id="inputValidationEx" size="15px">
+                        <span res class="hide">Ans: 'Jimmy'</span></li>
+                    <li> begins with T, ends with T, and has T in it?<br><input type="text" id="inputValidationEx" size="15px">
+                        <span res class="hide">Ans: 'A teapot'</span></li>
+                    <li>What has a head and a tail but no body?<br><input type="text" id="inputValidationEx" size="15px">
+                        <span res class="hide">Ans: 'A coin'</span></li>
+                    <li>You can hold it without using your hands or your arms. What is it?<br><input type="text" id="inputValidationEx" size="15px">
+                        <span res class="hide">Ans: 'Your breath'</span></li>
+                    <li>What building has the most stories?<input type="text" id="inputValidationEx" size="15px">
+                        <span res class="hide">Ans: 'The Library'</span></li>
+                    <li>Who has the most followers on youtube?<input type="text" id="inputValidationEx" size="15px">
+                        <span res class="hide">Ans: 'PewDiePie with subscribers worth 96m'</span></li>
+               </ol>
+               <span class="helper-text" data-error="wrong" data-success="right"><input style="margin-left: 20em;" class="btn btn-primary btn-md" type="submit" id="s2btn"></span>
+            </form>
+    </section>
+
+   
+</main>
+<script>
+	// JavaScript code goes here
+    var canvas = document.getElementById('breakout');
+    var ctx = canvas.getContext('2d');
+    let img = document.getElementById('breakoutimg');
+    //let img = document.createElement('img');
+    //img.src = "game1.png";
+    ctx.drawImage(img, 10, 10, 450, 300);
+    
+   // Draw function using Setinterval
+   var x = canvas.width/2;  
+   var y = canvas.height-30;
+   var dx = 2;
+   var dy = -2;
+   var ballRadius = 10;
+   var paddleHeight = 10;
+   var paddleWidth = 75;
+   var paddleX = (canvas.width-paddleWidth)/2;
+   var rightPressed = false;
+   var leftPressed = false;
+   var brickRowCount = 3;
+   var brickColumnCount = 5;
+   var brickWidth = 75;
+   var brickHeight = 20;
+   var brickPadding = 10;
+   var brickOffsetTop = 30;
+   var brickOffsetLeft = 30;
+   var score = 0;
+   var score2 = 0;
+   var lives = 3;
+
+   var bricks = [];
+   for(var c=0; c<brickColumnCount; c++){
+       bricks[c] = [];
+       for(var r=0; r<brickRowCount; r++){
+           bricks[c][r] = {x: 0, y: 0, status: 1};
+       }
+   }
+   
+   function drawBall(){
+        ctx.beginPath();
+       ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    //    ctx.fillStyle = 'rgba(255,200,100,1)' ;
+    let grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+    grd.addColorStop(0, "purple");
+    grd.addColorStop(1, "black");
+       ctx.fillStyle = grd;
+       ctx.fill();
+       ctx.closePath();
+   }
+
+   function drawPaddle(){
+        ctx.beginPath();
+       ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+    //    ctx.fillStyle = 'rgba(255,200,100,1)' ;
+    let grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+    grd.addColorStop(0, "purple");
+    grd.addColorStop(1, "black");
+       ctx.fillStyle = grd ;
+       ctx.fill();
+       ctx.closePath();
+   }
+
+   function drawBricks(){
+       for(var c=0; c<brickColumnCount; c++){
+           for(var r=0; r<brickRowCount; r++){
+               if(bricks[c][r].status == 1){
+                    var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+                    var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+                    bricks[c][r].x = brickX;
+                    bricks[c][r].y = brickY;
+                    ctx.beginPath();
+                    ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                    //    ctx.fillStyle = 'rgba(255,200,100,1)' ;
+                    let grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                    grd.addColorStop(0, "purple");
+                    grd.addColorStop(1, "black");
+                    ctx.fillStyle = grd ;
+                    ctx.fill();
+                    ctx.closePath();
+               }
+           }
+       }
+       
+   }
+
+
+   function draw(){
+       // drawing code
+       ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBricks();       
+        drawBall();
+        drawPaddle();
+        drawScore();
+        drawLives();
+        collisionDetection();        
+       x += dx;
+       y += dy;
+       if(x + dx > canvas.width - ballRadius || x + dx < ballRadius) dx = -dx;
+       if(y + dy < ballRadius) dy = -dy;
+       if(y + dy > canvas.height - ballRadius) {
+           if (x > paddleX && x < paddleX + paddleWidth) dy = - dy;
+           else{
+               lives--;
+               score2 -= 5;
+               if(!lives){
+                alert('GAME OVER');
+                document.location.reload();                
+               } else{
+                   x = canvas.width/2;
+                   y = canvas.height-30;
+                   dx = 2;
+                   dy = -2;
+                   paddleX = (canvas.width-paddleWidth)/2;
+               }
+           }
+           
+       };
+       if(rightPressed && paddleX < canvas.width - paddleWidth) paddleX += 7;
+       if(leftPressed && paddleX > 0) paddleX -= 7;
+
+       requestAnimationFrame(draw)
+   }
+
+   document.addEventListener('keydown', keyDownHandler, false);
+   document.addEventListener('keyup', keyUpHandler, false);
+   document.addEventListener('mousemove', mouseMoveHandler, false);
+
+
+   function mouseMoveHandler(e){
+       var relativeX = e.clientX - canvas.offsetLeft;
+        if(relativeX > 0 && relativeX < canvas.width){
+           paddleX = relativeX - paddleWidth/2;
+        } 
+   }
+
+   function keyDownHandler(e){
+        if(e.key =='Right' || e.key == 'ArrowRight'){
+            rightPressed = true;
+        } else if(e.key == 'Left' || e.key == 'ArrowLeft'){
+            leftPressed = true;
+        }
+   }
+   function keyUpHandler(e){
+        if(e.key =='Right' || e.key == 'ArrowRight'){
+            rightPressed = false;
+        } else if(e.key == 'Left' || e.key == 'ArrowLeft'){
+            leftPressed = false;
+        }
+   }
+
+   function collisionDetection(){
+       for(var c=0; c<brickColumnCount; c++){
+           for(var r=0; r<brickRowCount; r++){
+               var b = bricks[c][r];
+               if(b.status == 1){
+                    if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight){
+                        dy = -dy
+                        b.status = 0;
+                        score++;
+                        score2 += 5;
+                        if(score == brickRowCount * brickColumnCount){
+                            alert('YOU WIN, CONGRATULATIONS!');
+                            document.location.reload();                            
+                        }
+                    }
+               }              
+           }
+       }
+       
+   }
+
+   function drawScore(){
+      ctx.font = '16px Arial';
+      let grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                    grd.addColorStop(0, "purple");
+                    grd.addColorStop(1, "black");
+      ctx.fillStyle = grd;
+      ctx.fillText('Score: ' + score2, 8, 20);       
+   }
+
+   function drawLives(){
+      ctx.font = '16px Arial';
+      let grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                    grd.addColorStop(0, "purple");
+                    grd.addColorStop(1, "black");
+      ctx.fillStyle = grd;
+      ctx.fillText('Lives: ' + lives, canvas.width-65, 20);       
+   }
+
+function playBreakout(){
+    document.querySelector('#breakout').classList.remove('hide');
+   document.getElementById('breakoutimg').classList.add('hide');
+    //document.getElementById('breakout').classList.add(show);
+   draw()
+}
+
+// Game 2
+function myalert() {
+                        alert("THE INTELLIGENT is a game to test your knowledge. All you need to do is to type in the ans and click submit. At the end of the game you get to know your score. \n" + "Am sensing that you're an intelligent fellow. " +
+                            "Let's see what you've got. Believe me, this game is going to blow your mind.\n" + 
+                                    "Try it out.!");
+                    }        
+
+    document.querySelector('#s1btn').addEventListener('click', (e)=>{
+        e.preventDefault();
+        //console.log(e);
+        document.querySelectorAll('[ans]').forEach((a)=>{
+        //console.log(e);
+            a.classList.remove('hide');
+        });
+
+    });
+    
+    document.querySelector('#s2btn').addEventListener('click', (e)=>{
+        e.preventDefault();
+        document.querySelectorAll('[res]').forEach((r)=>{
+            r.classList.remove('hide');
+        });
+
+    });
+</script>
+
+</body>
+</html>

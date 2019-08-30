@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<!-- The html head starts from here -->
+<head>
+<base href="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="The Wise One! Try out your knowledge and see what you know and what to know">
+<meta name="keywords" content="Probabilities, Variables, Riddles, World problems, fun,">
+<meta name="Brainwork" content="Question and Answer">
+<meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:title" content="Agar.io " />
+<meta property="og:description" content="Prove you're the most wise! Answer some intelligent questions! Try and answer all quizes and be the most wise one!" />
+<meta property="og:url" content="http://agar.io/" />
+<meta property="og:image" content="http://agar.io/img/1.png" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="620" />
+<meta property="og:type" content="website" />
+<meta property="al:ios:url" content="com.miniclip.agar.io://">
+<meta property="al:ios:app_store_id" content="995999703">
+<meta property="al:ios:app_name" content="Agar.io">
+<meta property="al:android:url" content="com.miniclip.agar.io://">
+<meta property="al:android:app_name" content="Agar.io">
+<meta property="al:android:package" content="com.miniclip.agar.io">
+<title>The Wise</title>
+<link rel="Q&S" href="http://agar.io/" />
+
+<!-- The CSS properties starts from here -->
+    <style>
+        body{
+            width: 1000px;
+            height: 620px;
+            margin: 0;
+        }
+        .section1{
+            width: 1000px;
+            height: 620px;
+            border: 3px solid cyan;
+            background: #0000ff 1px 1px;
+            display: block;
+            margin: 0 auto;
+        }
+        h1{
+            color: #eee;
+            background: blue;
+            border-radius: 10px;
+            padding: 3px;
+            text-align: center;
+            
+        }
+        p{
+            color: #ffe4c4;
+            text-align: center;
+            text-justify: auto;
+            text-indent: 4em hanging;
+        }
+        #user_name{
+            margin-left: 3em;
+            padding: 0.5em;
+        }
+        #welcome{
+            background: #000000;
+            width: 200px;
+            height: 350px;
+            border: 5px transparent lightblue;
+            margin-top: 0.5em;
+            margin-left: 0.25em;
+            float: left;
+            border-radius: 5px;
+        }
+        #game1{
+            width: 350px;
+            height: 400px;
+            border: 1px solid #ffffff;
+            margin-top: 0.5em;
+            margin-right: 0.5em;
+            float: right;
+            position: relative;
+            background-color: grey;
+            animation-name: example1;
+            animation-duration: 2s;
+        }
+        @keyframes example1 {
+        0%   {background-color: grey; right:0px; top:0px;}
+        25%  {background-color: brown; right:0px; top:200px;}
+        50%  {background-color: burlywood; right:200px; top:200px;}
+        75%  {background-color: lightgoldenrodyellow; right:200px; top:0px;}
+        100% {background-color: grey; right:0px; top:0px;}
+        }
+        #game2{
+            width: 350px;
+            height: 416px;
+            border: 1px solid #ffffff;
+            margin-top: 18%;
+            margin-left: 4em;
+            float: left;
+            position: relative;
+            background-color: darkolivegreen;
+            animation-name: example;
+            animation-duration: 2s;
+        }
+
+        @keyframes example {
+        0%   {background-color: darkolivegreen; left:0px; top:0px;}
+        25%  {background-color: darkkhaki; left:0px; top:200px;}
+        50%  {background-color: lightgreen; left:200px; top:200px;}
+        75%  {background-color: yellow; left:200px; top:0px;}
+        100% {background-color: darkolivegreen; left:0px; top:0px;}
+        }
+        #username{
+            height: 20px;
+        }
+        /* label color */
+        .input-field label {
+            color: #ffffff;
+        }
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #ffffff;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* valid color */
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* invalid color */
+        .input-field input[type=text].invalid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        /* icon prefix focus color */
+        .input-field .prefix.active {
+            color: #000;
+        }
+        #inputValidationEx, #inputValidationEx2, label{
+            padding: 3px;
+            margin: 4px;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            margin: 5px;
+            padding: 5px;
+        }
+        ol{
+            color: white;
+        }
+    </style>
+<!-- The CSS properties ends here -->
+
+</head>
+<!-- The Head Stops here -->
+
+<!-- The Body Starts from here -->
+<body>
+ 
+<!-- Note** The Section and Nav for the game body starts from here -->
+<section class="section1">
+   <nav>
+<!-- Here we have the first div -->
+        <div id="welcome">
+            <h1>THE INTELLIGENT</h1>
+            <p>Double click on "Ready" to <br>read the info about the game</p>
+            <button ondblclick="myalert()"> Ready </button>
+            
+                
+                <!-- Horizontal material form -->
+                <form>
+                <!-- Grid row -->
+                <div class="form-group row">
+                    <!-- Material input -->
+                    <label for="inputEmail3MD" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                    <div class="md-form mt-0">
+                        <input type="email" class="form-control" id="inputEmail3MD" placeholder="Email">
+                    </div>
+                    </div>
+                </div>
+                <!-- Grid row -->
+
+                <!-- Grid row -->
+                <div class="form-group row">
+                    <!-- Material input -->
+                    <label for="inputPassword3MD" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                    <div class="md-form mt-0">
+                        <input type="password" class="form-control" id="inputPassword3MD" placeholder="Password">
+                    </div>
+                    </div>
+                </div>
+                <!-- Grid row -->
+
+                <!-- Grid row -->
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary btn-md">Sign in</button>
+                    </div>
+                </div>
+                <!-- Grid row -->
+                </form>
+                <!-- Horizontal material form -->
+            </p>
+        </div>
+<!-- The first div ends here -->
+<!-- Here we have the first div -->
+        <div id="game1">
+            <div class="row">
+                <form class="col s12">
+                    <div class="input-field col s12">
+                        <i class="fas fa-envelope prefix"></i>
+                            <ol>
+                                <li>Who is the founder of Facebook? <br><input type="text" id="inputValidationEx3" size="10px"><!--Mark Zurkerberg--></li>
+                                <li>Who is the richest man in the world? <br><input type="text" id="inputValidationEx4" size="10px"><!--Jeff bezos--></li>
+                                <li>Who has the most followers on twitter? <br><input type="text" id="inputValidationEx5" size="10px"><!--Barack Obama--></li>
+                                <li>Who has the most followers on facebook? <br><input type="text" id="inputValidationEx6" size="10px"><!--Cristiano Ronaldo--></li>
+                                <li>Who holds the record for most grand slams won in women's tennis?<input type="text" id="inputValidationEx7" size="10px"><!--Serena Williams (23 Grand Slams Titles)--></li>
+                                <li>Who won the most UEFA best player award? <br><input type="text" id="inputValidationEx8" size="10px"><!--Cristiano Ronaldo (3 awards)--></li>
+                                <li>Who is the best player in the world in the year 2002? <input type="text" id="inputValidationEx9" size="10px"><!--Ronaldo (Brazil)--></li>
+                            </ol>
+                            <span class="helper-text" data-error="wrong" data-success="right"><input style="margin-left: 20em;" class="btn btn-primary btn-md" type="submit"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!-- The first div ends here -->
+
+<!-- Here we have the second div -->
+        <div id="game2">
+            <ol>
+                <li>Jimmy’s mother had three children. The first was called April, the second was called May. <br>What was the name of the third?<br><input type="text" id="inputValidationEx" size="15px"><!--Ans is 'Jimmy'--></li>
+                <li> begins with T, ends with T, and has T in it?<br><input type="text" id="inputValidationEx" size="15px"><!--Ans is 'A teapot'--></li>
+                <li>What has a head and a tail but no body?<br><input type="text" id="inputValidationEx" size="15px"><!--A coin--></li>
+                <li>You can hold it without using your hands or your arms. What is it?<br><input type="text" id="inputValidationEx" size="15px"><!--Ans is 'Your breath'--></li>
+                <li>What building has the most stories?<input type="text" id="inputValidationEx" size="15px"><!--Ans is 'The Library'--></li>
+                <li>Who has the most followers on youtube?<input type="text" id="inputValidationEx" size="15px"><!--PewDiePie with subscribers worth 96m--></li>
+           </ol>
+           <span class="helper-text" data-error="wrong" data-success="right"><input style="margin-left: 20em;" class="btn btn-primary btn-md" type="submit"></span>
+        </div>
+<!-- The second div ends here -->
+    </nav>
+</section>
+<!-- Note** The Section and Nav for the game body ends here -->
+
+<!-- Here, your JavaScript starts from -->
+    <script>
+        const VIEWPORT_HEIGHT = 1000; 
+        const VIEWPORT_WIDTH = 620;
+        const SCREEN_VIEWPORT_RATIO = window.innerHeight / VIEWPORT_HEIGHT;
+        section.setAttribute('height', window.innerHeight); 
+        section.setAttribute('width', VIEWPORT_WIDTH * SCREEN_VIEWPORT_RATIO);
+        
+
+        function myalert() {
+                        alert("THE INTELLIGENT is a game to test your knowledge. All you need to do is to type in the ans and click submit. At the end of the game you get to know your score. \n" + "Am sensing that you're an intelligent fellow. " +
+                            "Let's see what you've got. Believe me, this game is going to blow your mind.\n" + 
+                                    "Try it out.!");
+                    }        
+                    
+                   
+
+        function userInput( playerName ){
+            for(ui in playerName){
+                do{
+                            var iData = prompt( inputs[ui],"");
+                }while( iData.length==0);
+                playerName[ui] = iData;
+            }
+            return playerName;
+        };
+
+        // E.g. save the user’s progress
+        localStorage.setItem(
+            'game_state’,
+                JSON.stringify(gameState));
+
+    </script>
+    <script>
+        function myalert() {
+            alert("THE INTELLIGENT is a game to test your knowledge. All you need to do is to type in the ans and click submit. At the end of the game you get to know your score. \n" + "Am sensing that you're an intelligent fellow. " +
+                "Let's see what you've got. Believe me, this game is going to blow your mind.\n" + 
+                    "Try it out.!");
+                }    
+    </script>
+
+<!-- The JavaScript ends here -->
+</body>
+</html>
+
+
